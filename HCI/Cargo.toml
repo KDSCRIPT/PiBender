@@ -1,0 +1,14 @@
+[package]
+name = "hciutils"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+pyo3 = { version = "0.17", features = ["extension-module"] }
+rayon = "1.5"
+
+[lib]
+crate-type = ["cdylib"]
+
+[package.metadata.maturin]
+bindings = "pyo3"
